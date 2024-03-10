@@ -8,11 +8,11 @@ document.write('Cantidad de letras: ', palabra.length);
 document.write('<br><br>');
 
 // Ver caracteres especifica en un texto
-document.write('Primaras 4 letras: ', palabra.slice(0, 4));
+document.write('Primeras 4 letras: ', palabra.slice(0, 4));
 document.write('<br><br>');
 
 // Ver caracteres especifica en un texto
-document.write('Primaras 4 letras: ', palabra.substring(0, 4));
+document.write('Primeras 4 letras: ', palabra.substring(0, 4));
 document.write('<br><br>');
 
 // Cambiar valores en un texto
