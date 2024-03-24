@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SubClases</title>
+</head>
+<body>
+	
+	<script>
+
+		class Player{
+			constructor(nombre, color_sombrero){
+				this.nombre = nombre;
+				this.color_sombrero = color_sombrero;
+			}
+
+			saltar(){}
+			correr(){}
+			saludar(){
+				return `Hola soy ${this.nombre} y mi sombrero es ${this.color_sombrero}`
+			}
+
+			// Obtener un atributo
+			get nombre(){
+				return this._nombre;
+			}
+
+			// Cambiar valor de un atributo
+			set nombre(nuevo_nombre){
+				this._nombre = nuevo_nombre;
+			}
+		}
+
+		let player_1 = new Player('Maria', 'Rojo');
+		let player_2 = new Player('Luigi', 'Verde');
+
+		// Crear una subclase
+
+		class Pet extends Player{
+			constructor(nombre, color_sombrero, color_piel){
+				super(nombre, color_sombrero);
+				this._color_piel = color_piel;
+			}
+
+			get color_piel(){
+				return this._color_piel;
+			}
+
+			set cambiar_color_piel(nuevo_valor){
+				this._color_piel = nuevo_valor;
+			}
+
+			comer(){
+				return 'Yo como manzanas';
+			}
+
+			// Reescribir metodo
+			saludar(){
+				return super.saludar() +' tambien soy una mascota';
+			}
+		}
+
+		let pet_1 = new Pet('Yoshi', 'Invisible', 'Verde');
+
+		console.log(pet_1);
+		console.log(pet_1.nombre);
+		console.log(pet_1.color_piel);
+
+		console.log(pet_1.comer());
+		console.log(pet_1.saludar());
+
+	</script>
+</body>
+</html>

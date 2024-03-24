@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Atributos y Metodos Estatico</title>
+</head>
+<body>
+
+	<script>
+		
+		class Mascota{
+			static cola = 'Larga';
+			static contador_mascota = 0;
+			pelaje = 'Lacio';
+
+			constructor(nombre, edad){
+				this._nombre = nombre;
+				this.edad = edad;
+				this._numero = ++Mascota.contador_mascota;
+			}
+
+			get numero_creacion(){
+				return this._numero;
+			}
+
+			static saludar(){
+				return `Mover la cola`;
+			}
+		}
+
+		let mascota_1 = new Mascota('Firulais', 3);
+		let mascota_2 = new Mascota('Max', 3);
+		let mascota_3 = new Mascota('Fenix', 4);
+		
+		console.log(Mascota.cola);
+
+		console.log(mascota_1.numero_creacion);
+		console.log(mascota_2.numero_creacion);
+		console.log(mascota_3.numero_creacion);
+
+		console.log(Mascota.saludar());
+
+	</script>	
+</body>
+</html>
