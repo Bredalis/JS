@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SETTIMEOUT y SETINTERVAL</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+
+		// SETTIMEOUT - se ejecuta 
+		// despues de cierto tiempo
+
+		function saludo(nombre) {
+			console.log("Hola, Mundo " + nombre);
+		} 
+
+		let temporizadorId = setTimeout(saludo, 20000, "PC");
+
+		// Cancelar la llamada
+		clearTimeout(temporizadorId);
+
+		// Ejecutar una funcion cada 
+		// cierto tiempo setInterval
+
+		let numero = 5;
+		function conteo() {
+			console.log(`Lanzamiento en ${numero} segundos`);
+			numero--;
+
+			if(numero == 0) {
+				clearInterval(lanzamiento);
+			}
+		}
+
+		let lanzamiento = setInterval(conteo, 1000);
+
+		// SETTIMEOUT anidado
+
+		let valor = 0;
+		let incrementoId = setTimeout(incremento, 1000);
+		function incremento() {
+			console.log(valor);
+			valor++;
+			incrementoId = setTimeout(incremento, 1000);
+		}
+
+	</script>
+</body>
+</html>

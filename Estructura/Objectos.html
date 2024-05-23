@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Objectos</title>
+</head>
+<body>
+
+	<script>
+
+		// Crear objectos
+		
+		let usuario  = {
+			nombre: "Maria",
+			edad: 20,
+			estudiante: true,
+			"Tiene Pasaporte": true,
+			idiomas: {
+				nativo: "Chino",
+				ingles: "Avanzado",
+				japones: "Intermedio"
+			}
+		};
+		
+		console.log(usuario);
+		console.log(usuario.nombre);
+
+		// Agregar propiedades
+		usuario.carrera = "Informatico";
+		console.log(usuario);
+
+		// Eliminar propiedad
+		delete usuario.edad;
+		console.log(usuario);
+
+		// Consulta de propiedad
+		// Si existe o no
+		console.log(usuario.hasOwnProperty("nombre"));
+
+		// Metodo de corchetes
+		console.log(usuario["Tiene Pasaporte"]);
+		console.log(usuario.idiomas.nativo);
+		console.log(usuario.idiomas["nativo"]);
+
+	</script>	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clases</title>
+</head>
+<body>
+	
+	<script>
+
+		class Player {
+			constructor(nombre, colorSombrero) {
+				this.nombre = nombre;
+				this.colorSombrero = colorSombrero;
+			}
+
+			saltar() {}
+			correr() {}
+			saludar() {
+				return `Hola soy ${this.nombre} y mi sombrero es ${this.colorSombrero}`
+			}
+
+			// Obtener un atributo
+			get nombre() {
+				return this._nombre;
+			}
+
+			// Cambiar valor de un atributo
+			set nombre(nuevoNombre) {
+				this._nombre = nuevoNombre;
+			}
+		}
+
+		let player1 = new Player("Mario", "Rojo");
+		let player2 = new Player("Luigi", "Verde");
+
+		console.log(player1);
+		console.log(player2);
+
+		console.log(player1.saludar());
+		console.log(player2.saludar());
+
+		console.log(player1.nombre);
+		player1.nombre = "Alberto";
+		console.log(player1.nombre);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Checkbox</title>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+	
+	<h4>¿Qué lenguajes conoces?</h4>
+
+	<form>
+		<input type="checkbox" id="check1">Java<br>
+		<input type="checkbox" id="check2">Python<br>
+		<input type="checkbox" id="check3">JavaScript<br>
+		<input type="checkbox" id="check4">C#<br>
+		<input type="checkbox" id="check5">Kotlin<br><br>
+		<input type="button" value="Confirmar" onclick="seleccion()">
+	</form>
+
+	<script>
+		
+		function seleccion() {
+			let cantidadSeleccionada = 0;
+			let i;
+
+			for (i = 1; i < 6; i++) {
+
+				if (document.getElementById(`check${i}`).checked) {
+					cantidadSeleccionada++;
+				}
+			}
+
+			if (cantidadSeleccionada == 1) {
+				swall(`Conoces: ${cantidadSeleccionada} lenguaje`);
+
+			} else {
+				swall(`Conoces: ${cantidadSeleccionada} lenguajes`);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+* {
+	text-align: center;
+	margin: 30px;
+}
+
+body {
+	background: black;
+	color: white;
+}
+
+h1 {
+	font-size: 230px;
+}
+
+legend {
+	font-size: 50px;
+}
