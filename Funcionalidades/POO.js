@@ -10,7 +10,8 @@ class Persona {
   }
 }
 
+var elemento = document.getElementById("parrafo");
+
 function cambiar_texto() {
-  var elemento = document.getElementById("parrafo");
   elemento.innerHTML = "¡El texto ha sido cambiado con JavaScript!";
 }

@@ -13,7 +13,8 @@
 	<script>
 
 		function redireccionar() {
-			if (window.confirm("Desea salir de la pagina?")) {
+			let confirmacion = window.confirm("Desea salir de la pagina?");
+			if (confirmacion) {
 				window.location = "https://wikipedia.com";
 			}
 		}

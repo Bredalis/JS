@@ -10,26 +10,26 @@
 	<h4>Funcion Open y Confirmar</h4>
 
 	<form>
-		<input type="button" value="Abrir en otra pestaña" onclick="abrir()"><br><br>
-		<input type="button" value="Abrir en otra ventana" onclick="ventana()"><br><br>
-		<input type="button" value="Salir" onclick="confirmar()">
+		<input type="button" value="Abrir en otra pestaña" onclick="abrirVentana()"><br><br>
+		<input type="button" value="Abrir en otra ventana" onclick="configurarVentana()"><br><br>
+		<input type="button" value="Salir" onclick="confirmarSalida()">
 	</form>
 
 	<script>
 
-		function abrir() {
+		function abrirVentana() {
 			let ventana = open();
 			ventana.document.write("Soy otra pagina web");
 		}
 
-		function ventana() {
+		function configurarVentana() {
 			let ventana = open(", ", "width = 400, height = 250");
 			ventana.document.write("Soy otra ventana de pagina web");
 		}
 
-		function confirmar() {
+		function confirmarSalida() {
 			let respuesta = confirm("Desea salir de la pagina?");
-			if(respuesta === true) {
+			if (respuesta) {
 				window.close();
 			}
 		}

@@ -19,15 +19,17 @@
 
 	<script>
 
-		let area = document.getElementById("comentarios");
+		var area = document.getElementById("comentarios");
 
 		function comentar() {
+			let longitudArea = area.value.length;
 
-			if (area.value.length > 100) {
-				swal("Comentario muy largo, cantidad de caracteres " + area.value.length);
-			} else {
-				swal("Gracias!");
-			}
+			if (longitudArea > 100) {
+				swal("Comentario muy largo, cantidad de caracteres " + longitudArea);
+				return;			
+			} 
+
+			swal("Gracias!");
 		}
 		
 	</script>

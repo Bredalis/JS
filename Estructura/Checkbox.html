@@ -32,12 +32,12 @@
 				}
 			}
 
-			if (cantidadSeleccionada == 1) {
-				swall(`Conoces: ${cantidadSeleccionada} lenguaje`);
-
-			} else {
-				swall(`Conoces: ${cantidadSeleccionada} lenguajes`);
+			if (cantidadSeleccionada !== 1) {
+				swal(`Conoces: ${cantidadSeleccionada} lenguajes`);
+				return;
 			}
+
+			swal(`Conoces: ${cantidadSeleccionada} lenguaje`);
 		}
 	</script>
 </body>

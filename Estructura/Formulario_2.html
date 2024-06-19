@@ -23,13 +23,14 @@
 
 	<script>
 
-		let control = 0;
-		var codigoAcceso = "acceso01";
+		var control = 0;
+		var codigoDeAcceso = "acceso01";
 
-		function verificar() {
-			let clave = document.getElementById("clave").value;
+		function verificar() {		
 
-			if (clave != codigoAcceso || clave == " ") {
+			let clave = document.getElementById("clave").value;	
+
+			if (clave != codigoDeAcceso || clave == " ") {
 				alert("Clave incorrecta o vacia, intentelo de nuevo");
 				control++;
 
@@ -37,10 +38,12 @@
 					alert("Intentos agotados");
 				}
 				
-			} else {
-				window.open("http://www.google.com");
+				return;
 			}
+
+			window.open("http://www.google.com");
 		}
+
 	</script>
 </body>
 </html>
