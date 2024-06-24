@@ -10,6 +10,11 @@ class Persona {
   }
 }
 
+// Instancia
+var persona = new Persona("Bredalis", 15);
+persona.saludar();
+
+// Manipulando el DOM
 var elemento = document.getElementById("parrafo");
 
 function cambiar_texto() {

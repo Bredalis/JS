@@ -17,7 +17,7 @@
 			constructor(nombre, edad) {
 				this._nombre = nombre;
 				this.edad = edad;
-				this._numero = ++Mascota.contadorMascota;
+				this._numero = ++ Mascota.contadorMascota;
 			}
 
 			get numeroCreacion() {
@@ -25,9 +25,11 @@
 			}
 
 			static saludar() {
-				return `Mover la cola`;
+				return "Mover la cola";
 			}
 		}
+
+		// Instancias 
 
 		let mascota1 = new Mascota("Firulais", 3);
 		let mascota2 = new Mascota("Max", 3);
