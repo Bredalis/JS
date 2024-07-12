@@ -11,7 +11,6 @@ console.log(parrafos.length);
 parrafos[1].innerHTML = "SELECCIONADO POR CLASE";
 
 // Por etiqueta
-
 let etiquetas = document.getElementsByTagName("p");
 console.log(etiquetas.length);
 etiquetas[2].innerHTML = "POR ETIQUETA";
