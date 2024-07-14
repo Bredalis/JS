@@ -42,8 +42,6 @@ Para ver la página solo debes seguir estos pasos:
 3. 🌐 Ubicarte en el archivo index.html que está en la carpeta HTML, presionar click derecho y darle
    a Abrir en navegador (Sublime Text) o Abrir con Live Browser en VS Code.
 
-4. 👉🏻 O simplemente has click <a href="https://bredalis.github.io/JS/HTML/index.html" target="_blank">aquí</a>
-
 ## Licencia 📜
 
 Este proyecto está licenciado bajo la Licencia 📜 <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3 (GNU General Public License V3.0)</a>.
