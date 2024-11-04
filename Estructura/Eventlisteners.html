@@ -3,49 +3,51 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Eventlisteners</title>
+	<title>EventListeners</title>
 </head>
 <body>
-	
-	<h1>Event Listeners</h1>
+	<h1>EventListeners</h1>
 	<h2>Modificando el DOM</h2>
 
-	<input type="text" id="userInput">
+	<input type="text" id="user-input">
 	<button id="saludo">Saludo</button>
 
 	<script>
-		
-		// Hacer acciones
+		// Acciones en el botón 'Saludo'
+		const saludo = document.getElementById("saludo");
+
+		// Mostrar mensaje al hacer click
 		saludo.addEventListener("click", () => {
 			console.log("Hola con Click");
 		});
 
-		// Mostrar al hacer click izquierdo
+		// Mostrar mensaje con clic derecho (menú contextual)
 		saludo.addEventListener("contextmenu", () => {
 			console.log("Hola con Context-Menu");
 		});
 
-		// Mostrar al pasa puntero
+		// Mostrar mensaje al pasar el cursor
 		saludo.addEventListener("mouseover", () => {
 			console.log("Hola con MouseOver");
 		});
 
-		// Mostrar al pasa puntero
+		// Agregar despedida al pasar el cursor
 		saludo.addEventListener("mouseover", despedir);
 
-		// Borrar accion
+		// Eliminar saludo en clic
 		saludo.removeEventListener("click", despedir);
 
 		function despedir() {
-			console.log("Adios");
+			console.log("Adiós");
 		}
 
-		userInput.addEventListener("keypress", (event) => {
-			if (event.keyCode === 13) {
+		// Mostrar valor del input al presionar Enter
+		const input = document.getElementById("user-input");
+		input.addEventListener("keypress", (event) => {
+			if (event.key === 13) {
 				console.log(event.target.value);
 			}
 		});
-
 	</script>
 </body>
 </html>

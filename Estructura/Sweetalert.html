@@ -3,20 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sweetalert</title>
+	<title>SweetAlert</title>
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-
-	<h4>Saludo con Sweetalert</h4>
+	<h4>Saludo con SweetAlert</h4>
 	<input type="button" value="Saludar" onclick="saludo()">
-
 	<script>
-
 		function saludo() {
-			swal("Hola, Mundo");
+			swal({
+				title: "¡Hola!",
+				text: "Bienvenido al sitio web",
+				icon: "success",
+				button: "Gracias",
+			});
 		}
-		
 	</script>	
 </body>
 </html>

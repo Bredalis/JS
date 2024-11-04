@@ -6,27 +6,26 @@
 	<title>Onblur</title>
 </head>
 <body>
-	
 	<h4>Ingreso de datos</h4>
 
 	<label for="nombre">Ingrese su nombre:</label>
 	<input type="text" id="nombre" onfocus="fFocus()" onblur="fBlur()">
 
 	<script>
-
-		var nombre = document.getElementById("nombre").value;
+		const nombreInput = document.getElementById("nombre");
 
 		function fFocus() {
-			nombre = "";
+			nombreInput.value = ""; // Limpiar el campo cuando se enfoca
 		}
 		
 		function fBlur() {
-			if (nombre == "") {
-				nombre.style.background = "red";
+			if (nombreInput.value.trim() === "") {
+				nombreInput.style.backgroundColor = "red";
 				alert("Debe ingresar datos");
+			} else {
+				nombreInput.style.backgroundColor = "";
 			}
 		}
-
 	</script>
 </body>
 </html>

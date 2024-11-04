@@ -1,78 +1,71 @@
 
 // Vectores y matrices
-let vector = [1, 2, 3, 4, 5];
-let matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const vector = [1, 2, 3, 4, 5];
+const matriz = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
 
-let vectorModerno = new Array(3);
-vectorModerno[0] = "Lisa";
-vectorModerno[1] = "Perla";
-
-let matrizModerna = new Array(3);
-
-for(let i = 0; i < 3; i++) {
-	matrizModerna[i] = new Array(3);
-}
+const vectorModerno = ["Lisa", "Perla"];
+const matrizModerna = Array.from({ length: 3 }, () => Array(3));
 
 // Mostrar datos
 console.log("Vector:", vector);
-console.log("Vector elemento:", vector[2]);
+console.log("Elemento del vector:", vector[2]);
 console.log("Matriz:", matriz);
-console.log("Matriz elemento:", matriz[1][1]);
+console.log("Elemento de la matriz:", matriz[1][1]);
 console.log("Vector moderno:", vectorModerno);
 console.log("Matriz moderna:", matrizModerna);
 
 // Recorrer vectores
-let paises = ["Chile", "Mexico", "Brasil"];
-
-let i;
-for (i = 0; i < paises.length; i++) {
-	console.log(paises[i]);
-
-	if(paises[i] == "Chile") {
-		console.log("Este pais es picante");
-	}
-}
+const paises = ["Chile", "México", "Brasil"];
+paises.forEach(pais => {
+  console.log(pais);
+  
+  if (pais === "Chile") {
+    console.log("Este país es picante");
+  }
+});
 
 // Recorrer matrices
+matriz.forEach(fila => {
+  fila.forEach(elemento => {
+    console.log(elemento);
+  });
+});
 
-let f;
-for (f = 0; f < matriz.length; f++) {
-	for(let c = 0; c < matriz[f].length; c++) {
-		console.log(matriz[f][c]);
-	}
-}
+// Métodos de manipulación de arrays
+const frutas = ["Limón", "Piña"];
 
-// Metodos
-let frutas = ["Limon", "Piña"];
-
-// Ingresar
+// Insertar
 frutas.push("Manzana");
-console.log(frutas);
+console.log("Después de push:", frutas);
 
-// Borrar el ultimo elemento 
+// Eliminar el último elemento
 frutas.pop();
-console.log(frutas);
+console.log("Después de pop:", frutas);
 
-// Borrar el primer elemento
+// Eliminar el primer elemento
 frutas.shift();
-console.log(frutas);
+console.log("Después de shift:", frutas);
 
-// Agregar elemento de primero
-frutas.unshift("Sandia");
-console.log(frutas);
+// Agregar un elemento al inicio
+frutas.unshift("Sandía");
+console.log("Después de unshift:", frutas);
 
-// Filtro
-let frutasConA = frutas.filter(fruta => fruta.includes("a"));
-console.log(frutasConA);
+// Filtrar
+const frutasConA = frutas.filter(fruta => fruta.includes("a"));
+console.log("Frutas con 'a':", frutasConA);
 
 // Concatenar
-let concatenacion = frutas.concat(frutasConA);
-console.log(concatenacion);
+const concatenacion = frutas.concat(frutasConA);
+console.log("Concatenación:", concatenacion);
 
 // Revertir
 concatenacion.reverse();
-console.log(concatenacion);
+console.log("Reversión:", concatenacion);
 
 // Ordenar
 concatenacion.sort();
-console.log(concatenacion)
+console.log("Ordenación:", concatenacion);

@@ -6,19 +6,17 @@
 	<title>Redireccionamiento</title>
 </head>
 <body>
-
-	<label>Ir a Wikipedia.com</label>
-	<input type="button" onclick="redireccionar()" value="Ir">
+	<h4>Redirección a Wikipedia</h4>
+	<p>Haga clic en el botón para ir a Wikipedia.com</p>
+	<button onclick="redireccionar()">Ir</button>
 
 	<script>
-
 		function redireccionar() {
-			let confirmacion = window.confirm("Desea salir de la pagina?");
+			const confirmacion = window.confirm("¿Desea salir de la página?");
 			if (confirmacion) {
-				window.location = "https://wikipedia.com";
+				window.location.href = "https://wikipedia.com";
 			}
 		}
-
-	</script>	
+	</script>
 </body>
 </html>

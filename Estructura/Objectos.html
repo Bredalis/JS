@@ -3,15 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Objectos</title>
+	<title>Objetos</title>
 </head>
 <body>
-
 	<script>
-
-		// Crear objectos
-		
-		let usuario  = {
+		// Crear objeto
+		const usuario = {
 			nombre: "Maria",
 			edad: 20,
 			estudiante: true,
@@ -22,27 +19,27 @@
 				japones: "Intermedio"
 			}
 		};
-		
-		console.log(usuario);
-		console.log(usuario.nombre);
 
-		// Agregar propiedades
-		usuario.carrera = "Informatico";
+		// Desestructuración del objeto
+		const { nombre, edad } = usuario;
+		console.log(nombre);
+		console.log(edad);
+
+		// Agregar una propiedad
+		usuario.carrera = "Informática";
 		console.log(usuario);
 
 		// Eliminar propiedad
 		delete usuario.edad;
 		console.log(usuario);
 
-		// Consulta de propiedad
-		// Si existe o no
+		// Comprobar si una propiedad existe
 		console.log(usuario.hasOwnProperty("nombre"));
 
-		// Metodo de corchetes
+		// Acceder a propiedades con corchetes y notación de puntos
 		console.log(usuario["Tiene Pasaporte"]);
 		console.log(usuario.idiomas.nativo);
 		console.log(usuario.idiomas["nativo"]);
-
 	</script>	
 </body>
 </html>

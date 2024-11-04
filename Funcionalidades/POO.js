@@ -10,13 +10,17 @@ class Persona {
   }
 }
 
-// Instancia
-var persona = new Persona("Bredalis", 15);
+// Instancia de la clase Persona
+const persona = new Persona("Bredalis", 15); 
 persona.saludar();
 
-// Manipulando el DOM
-var elemento = document.getElementById("parrafo");
+// Manipulación del DOM
+const elemento = document.querySelector("#parrafo");
 
-function cambiar_texto() {
-  elemento.innerHTML = "¡El texto ha sido cambiado con JavaScript!";
+function cambiarTexto() {
+  if (elemento) {
+    elemento.textContent = "¡El texto ha sido cambiado con JavaScript!";
+  } else {
+    console.error("El elemento con id 'parrafo' no se encontró en el DOM.");
+  }
 }

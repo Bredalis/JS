@@ -1,18 +1,15 @@
 
-// Seleccionar al nodo padre 
-const elementoPadre = document.querySelector(".padre");
+// Seleccionar el nodo padre 
+const elementoPadre = document.querySelector(".contenedor-parrafos");
 
-// Crear nodo
+// Crear un nuevo párrafo
 const parrafoCuatro = document.createElement("p");
-parrafoCuatro.innerHTML = "Parrafo 4";
+parrafoCuatro.textContent = "Párrafo 4";
 
-// Eliminar nodo
-const parrafoUno = document.querySelector("#parrafo1");
-const parrafoDos = document.querySelector("#parrafo2");
+// Eliminar nodos
+document.querySelector("#parrafo1").remove();
+document.querySelector("#parrafo2").remove();
+
+// Reemplazar el nodo seleccionado
 const parrafoTres = document.querySelector("#parrafo3");
-
-elementoPadre.removeChild(parrafoUno);
-parrafoDos.remove();
-
-// Reemplazar valor
 elementoPadre.replaceChild(parrafoCuatro, parrafoTres);

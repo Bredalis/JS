@@ -1,21 +1,21 @@
 
-var color = prompt("Ingrese un color");
+// Solicitar un color al usuario
+const color = prompt("Ingrese un color").toLowerCase();
 
+// Mostrar un mensaje dependiendo del color ingresado por el usuario
 switch (color) {
-
-	case "Rojo":
+	case "rojo":
 		console.log("Es rojo");
 		break;
 
-	case "Azul":
+	case "azul":
 		console.log("Es azul");
 		break;
 
-	case "Amarillo":
+	case "amarillo":
 		console.log("Es amarillo");
 		break;
 
 	default:
-		console.log("El color ingresado no es valido");
-		break
+		console.log("El color ingresado no es válido");
 }

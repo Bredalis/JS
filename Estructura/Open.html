@@ -6,8 +6,7 @@
 	<title>Open</title>
 </head>
 <body>
-	
-	<h4>Funcion Open y Confirmar</h4>
+	<h4>Función Open y Confirmar</h4>
 
 	<form>
 		<input type="button" value="Abrir en otra pestaña" onclick="abrirVentana()"><br><br>
@@ -16,24 +15,22 @@
 	</form>
 
 	<script>
-
 		function abrirVentana() {
-			let ventana = open();
-			ventana.document.write("Soy otra pagina web");
+			const ventana = window.open();
+			ventana.document.write("<h1>Soy otra página web</h1>");
 		}
 
 		function configurarVentana() {
-			let ventana = open(", ", "width = 400, height = 250");
-			ventana.document.write("Soy otra ventana de pagina web");
+			const ventana = window.open("", "", "width=400,height=250");
+			ventana.document.write("<h1>Soy otra ventana de página web</h1>");
 		}
 
 		function confirmarSalida() {
-			let respuesta = confirm("Desea salir de la pagina?");
+			const respuesta = confirm("¿Desea salir de la página?");
 			if (respuesta) {
 				window.close();
 			}
 		}
-
 	</script>
 </body>
 </html>

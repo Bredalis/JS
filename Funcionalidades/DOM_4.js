@@ -1,16 +1,17 @@
 
-// Crear nodo
-
+// Crear nodos con contenido
 const parrafoCero = document.createElement("p");
-parrafoCero.innerHTML = "Parrafo 0";
+parrafoCero.textContent = "Parrafo 0";
 
+// Agregar atributos
+parrafoCero.setAttribute("class", "parrafos");
+parrafoCero.setAttribute("id", "parrafo0");
+
+// Seleccionar el primer párrafo existente
 const parrafoUno = document.querySelector("p");
 
 // Seleccionar elemento padre
-const elementoPadre = document.querySelector(".padre");
+const elementoPadre = document.querySelector(".contenedor-parrafos");
 
-// Agregar nodos
+// Agregar nodo antes del primer párrafo
 elementoPadre.insertBefore(parrafoCero, parrafoUno);
-
-// Agregar atributos
-parrafoCero.setAttibute("class", "parrafos");

@@ -5,4 +5,4 @@ function area(radio) {
 	return PI * radio ** 2;
 }
 
-export{area};
+export{ area };

@@ -7,7 +7,6 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-
 	<h5>Comentarios</h5>
 	
 	<form>
@@ -18,20 +17,17 @@
 	</form>
 
 	<script>
-
-		var area = document.getElementById("comentarios");
+		const area = document.getElementById("comentarios");
 
 		function comentar() {
-			let longitudArea = area.value.length;
+			const longitudArea = area.value.length;
 
 			if (longitudArea > 100) {
-				swal("Comentario muy largo, cantidad de caracteres " + longitudArea);
-				return;			
-			} 
-
-			swal("Gracias!");
+				swal(`Comentario muy largo, cantidad de caracteres: ${longitudArea}`);
+			} else {
+				swal("¡Gracias!");
+			}
 		}
-		
 	</script>
 </body>
 </html>

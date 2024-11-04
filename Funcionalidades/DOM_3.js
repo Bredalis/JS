@@ -1,18 +1,13 @@
 
-// Crear nodo
+// Crear nodos con contenido
 const parrafoCuatro = document.createElement("p");
-const textoParrafoCuatro = document.createTextNode("Parrafo 4");
+parrafoCuatro.textContent = "Párrafo 4";
 
 const parrafoCinco = document.createElement("p");
-parrafoCinco.innerHTML = "Parrafo 5";
+parrafoCinco.textContent = "Párrafo 5";
 
 // Seleccionar elemento padre
-const elementoPadre = document.querySelector(".padre");
+const elementoPadre = document.querySelector(".contenedor-parrafos");
 
-// Insertar nodo
-elementoPadre.appendChild(parrafoCuatro);
-elementoPadre.appendChild(textoParrafoCuatro);
-elementoPadre.appendChild(parrafoCinco);
-
-// Insertar varios nodos
+// Insertar nodos al elemento padre
 elementoPadre.append(parrafoCuatro, parrafoCinco);

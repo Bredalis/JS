@@ -6,19 +6,17 @@
 	<title>Constructores</title>
 </head>
 <body>
-
 	<script>
-
-		// Constructores
-		function Disco(artista, cancion, album) {
+		// Constructor de Disco
+		function Disco(artista = "", cancion = "", album = "") {
 			this.artista = artista;
 			this.cancion = cancion;
 			this.album = album;
 		}
 		
-		let disco = new Disco("BTS", "Idol", "Love Myself");
+		// Creación de un objeto Disco y muestra en consola
+		const disco = new Disco("BTS", "Idol", "Love Myself");
 		console.log(disco);
-
 	</script>
 </body>
 </html>

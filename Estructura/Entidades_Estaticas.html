@@ -3,12 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Atributos y Metodos Estatico</title>
+	<title>Atributos y Métodos Estáticos</title>
 </head>
 <body>
-
 	<script>
-		
 		class Mascota {
 			static cola = "Larga";
 			static contadorMascota = 0;
@@ -17,7 +15,7 @@
 			constructor(nombre, edad) {
 				this._nombre = nombre;
 				this.edad = edad;
-				this._numero = ++ Mascota.contadorMascota;
+				this._numero = ++Mascota.contadorMascota;
 			}
 
 			get numeroCreacion() {
@@ -29,20 +27,16 @@
 			}
 		}
 
-		// Instancias 
-
-		let mascota1 = new Mascota("Firulais", 3);
-		let mascota2 = new Mascota("Max", 3);
-		let mascota3 = new Mascota("Fenix", 4);
+		// Creación de instancias y prueba de métodos
+		const mascota1 = new Mascota("Firulais", 3);
+		const mascota2 = new Mascota("Max", 3);
+		const mascota3 = new Mascota("Fenix", 4);
 		
 		console.log(Mascota.cola);
-
 		console.log(mascota1.numeroCreacion);
 		console.log(mascota2.numeroCreacion);
 		console.log(mascota3.numeroCreacion);
-
 		console.log(Mascota.saludar());
-
 	</script>	
 </body>
 </html>

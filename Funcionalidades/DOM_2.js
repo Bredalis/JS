@@ -1,19 +1,23 @@
 
 // Lectura de nodos
 
-// querySelector - ID
-let parrafo1 = document.querySelector("#parrafo1");
+// Seleccionar elemento por ID
+const parrafo1 = document.querySelector("#parrafo1");
 parrafo1.innerHTML = "POR QUERYSELECTOR - ID";
 
-// querySelectorAll - Clases
-let parrafos = document.querySelectorAll(".parrafos");
-console.log(parrafos);
+// Seleccionar todos los elementos con la clase 'parrafos'
+const parrafos = document.querySelectorAll(".parrafos");
+console.log("Nodos seleccionados por clase:", parrafos);
 
-const arregloParrafos = [...parrafos];
-console.log(arregloParrafos);
+// Convertir NodeList a array para facilitar la manipulación
+const arregloParrafos = Array.from(parrafos);
+console.log("Array de párrafos:", arregloParrafos);
 
+// Modificar contenido del segundo elemento de la clase 'parrafos'
 arregloParrafos[1].innerHTML = "POR QUERYSELECTORALL - CLASES";
 
-// Por etiquetas
-let etiquetas = document.querySelectorAll("p");
+// Seleccionar todos los elementos de tipo <p>
+const etiquetas = document.querySelectorAll("p");
+
+// Modificar contenido del tercer elemento <p>
 etiquetas[2].innerHTML = "POR QUERYSELECTORALL - ETIQUETAS";

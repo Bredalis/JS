@@ -1,31 +1,31 @@
 
-let mostrarFecha = document.getElementById("fecha");
-let mostrarReloj = document.getElementById("reloj");
+// Elementos del DOM para mostar la fecha y la hora
+const mostrarFecha = document.getElementById("fecha");
+const mostrarHora = document.getElementById("hora");
 
-// Datos para traducir los dias y meses
-let dias = [
+// Arreglos para nombres de los días y los meses
+const dias = [
     "Domingo", "Lunes", "Martes", "Miércoles", "Jueves",
     "Viernes", "Sábado"
 ];
 
-let meses = [
+const meses = [
     "Enero", "Febrero", "Marzo", "Abril",
     "Mayo", "Junio", "Julio", "Agosto",
     "Septiembre", "Noviembre", "Diciembre"
 ];
 
-// Función para actualizar la fecha y el reloj
+// Función para actualizar la fecha y la hora
 function actualizarFechaYHora() {
-    let fechaActual = new Date();
+    const fechaActual = new Date();
 
-    mostrarFecha.innerHTML = `${dias[fechaActual.getDay()]}, 
-    ${fechaActual.getDate()} de ${meses[fechaActual.getMonth()]}
+    mostrarFecha.textContent = `${dias[fechaActual.getDay()]}, 
+    ${fechaActual.getDate()} de ${meses[fechaActual.getMonth() - 1]}
     de ${fechaActual.getFullYear()}`;
     
-    mostrarReloj.innerHTML = fechaActual.toLocaleTimeString();
+    mostrarHora.textContent = fechaActual.toLocaleTimeString();
 }
 
+// Inicializar y actualizar cada segundo
 actualizarFechaYHora();
-
-// Actualizar la fecha y el reloj cada segundo
 setInterval(actualizarFechaYHora, 1000);

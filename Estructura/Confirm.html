@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sentencias</title>
 </head>
 <body>
-	
 	<h1>Uso de Confirm con JS</h1>
 	<script>
+		// Muestra un mensaje de confirmación y calcula los años restantes
+		const confirmacion = confirm("¿Te llamas Bredalis Gautreaux?");
+		const aniosRestantes = 2038 - new Date().getFullYear();
 
-		var confirmacion = confirm("¿Te llamas Bredalis Gautreaux?");
-
-		const añoActual = new Date().getFullYear();
-		const años = 2038 - añoActual;
-
-		if (confirmacion === true) {
-			console.log("En " + años + " años tendras tus metas actuales cumplidas");
-		} else {
-			console.log("No hay mensaje para ti");
-		}
+		// Mensaje basado en la respuesta de confirmación
+		console.log(confirmacion 
+			? `En ${aniosRestantes} años tendras tus metas actuales cumplidas` 
+			: "No hay mensaje para ti");
 	</script>
-</body>	
+</body>
 </html>

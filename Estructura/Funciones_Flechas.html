@@ -6,18 +6,14 @@
 	<title>Funciones Con Flechas</title>
 </head>
 <body>
-	
-	<script type="text/javascript">
-		
-		// Funciones con flechas
-
-		let saludo = nombre => "Saludos a " + nombre;
+	<script>
+		const saludo = nombre => `Saludos a ${nombre}`;
 		console.log(saludo("Bredalis"));
 
-		let suma = (a, b) => a + b;
+		const suma = (a, b) => a + b;
 		console.log(suma(1, 2));
 
-		let objecto = () => ({nombre: "Bob", edad: 20});
+		const objecto = () => ({ nombre: "Bob", edad: 20 });
 		console.log(objecto);		
 	</script>
 </body>

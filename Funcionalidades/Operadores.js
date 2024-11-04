@@ -1,32 +1,28 @@
 
-// Operadores Aritmeticos
-var suma = 35 + 3;
-var resta = 35 - 3;
-var multiplicacion = 34 * 2;
-var division = 5 / 5;
-var modulo = 60 % 2;
+// Operadores aritméticas
+const suma = 35 + 3;
+const resta = 35 - 3;
+const multiplicacion = 34 * 2;
+const division = 5 / 5;
+const modulo = 60 % 2;
 
-// Mostrar Resultado
+// Mostrar resultado aritméticos
 console.log("Suma:", suma);
 console.log("Resta:", resta);
-console.log("Multiplicacion:", multiplicacion);
-console.log("Division:", division)
+console.log("Multiplicación:", multiplicacion);
+console.log("División:", division)
 console.log("Modulo:", modulo);
 
-// Operadores Relacionales
-console.log(5 > 6);
-console.log(48 < 1);
-console.log(8 == 8);
+// Operadores relacionales
+console.log("5 > 6:", 5 > 6);
+console.log("48 < 1:", 48 < 1);
+console.log("8 === 8:", 8 === 8);
 
-// Operadores Logicos
-var edad = 18;
-var dni = !false;
+// Operadores lógicos
+const edad = 18;
+const dni = true;
 
-// Ejemplo con AND
-console.log(edad >= 18 && dni === true);
-
-// Ejemplo con OR
-console.log(edad >= 18 || dni === true);
-
-// Ejemplo con NOT
-console.log(dni);
+// Ejemplo de operadores lógicos
+console.log("(AND) edad >= 18 && dni === true:", edad >= 18 && dni === true);
+console.log("(OR) edad >= 18 || dni === true:", edad >= 18 || dni === true);
+console.log("(NOT) !dni:", !dni);

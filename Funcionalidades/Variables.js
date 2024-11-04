@@ -1,25 +1,23 @@
 
-// Variables
-var nombre = "Bredalis";
-var edad = 15;
-const femenina = true;
+// Variables y tipo de datos
+const nombre = "Bredalis";
+const edad = 15;
+let femenina = true;
 
-// Uso de let
+// Cambiar temporalmente el valor de 'femenina' dentro del bloque 'if'
 if (true) {
-	let femenina = true;
-	console.log(femenina)
+	let femenina = false;
+	console.log(femenina);
 }
 
-// Tipo de datos
-console.log("Tipo de datos");
+// Mostrar datos de las variables
+console.log("Datos:");
+alert(`Hola ${nombre}`);
+console.log("Edad:", edad);
+console.log("Femenina:", femenina);
+
+// Mostrar tipos de datos de cada variable
+console.log("Tipos de datos:");
 console.log("Nombre:", typeof(nombre));
 console.log("Edad:", typeof(edad));
 console.log("Femenina:", typeof(femenina));
-
-// Mostrar datos
-console.log("Datos");
-
-alert("Hola " + nombre);
-
-console.log("Edad:", edad);
-console.log("Femenina:", femenina);

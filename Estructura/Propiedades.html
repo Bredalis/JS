@@ -3,18 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Propiedades de pantalla</title>
+	<title>Propiedades de pantalla y el navegador</title>
 </head>
 <body>
-	
 	<script>
-		document.write("availHeight: ", screen.availHeight, "<br>");
-		document.write("availWidth: ", screen.availWidth, "<br>");
-		document.write("Colordepth: ", screen.colorDepth, "<br>");
+		// Mostrar propiedades de la pantalla
+		document.write(`<br>Propiedades de la pantalla:<br>`);
+		document.write(`availHeight: ${screen.availHeight}<br>`);
+		document.write(`availWidth: ${screen.availWidth}<br>`);
+		document.write(`Color depth: ${screen.colorDepth}<br>`);
 
-		document.write("Propiedades del navegador <br>");
-		document.write("appName: ", navigator.appName, "<br>");
-		document.write("appVersion: ", navigator.appVersion, "<br>");
+		// Mostrar propiedades del navegador
+		document.write(`<br>Propiedades del navegador:<br>`);
+		document.write(`appName: ${navigator.appName}<br>`);
+		document.write(`appVersion: ${navigator.appVersion}<br>`);
 	</script>
 </body>
 </html>

@@ -3,12 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>SubClases</title>
+	<title>SubClase</title>
 </head>
 <body>
-	
 	<script>
-
 		class Player {
 			constructor(nombre, colorSombrero) {
 				this.nombre = nombre;
@@ -18,7 +16,7 @@
 			saltar() {}
 			correr() {}
 			saludar() {
-				return `Hola soy ${this.nombre} y mi sombrero es ${this.colorSombrero}`
+				return `Hola soy ${this.nombre} y mi sombrero es ${this.colorSombrero}`;
 			}
 
 			// Obtener un atributo
@@ -32,11 +30,10 @@
 			}
 		}
 
-		let player1 = new Player("Maria", "Rojo");
-		let player2 = new Player("Luigi", "Verde");
+		const player1 = new Player("Maria", "Rojo");
+		const player2 = new Player("Luigi", "Verde");
 
 		// Crear una subclase
-
 		class Pet extends Player {
 			constructor(nombre, colorSombrero, colorPiel) {
 				super(nombre, colorSombrero);
@@ -47,7 +44,7 @@
 				return this._colorPiel;
 			}
 
-			set cambiarColorPiel(nuevoValor) {
+			set colorPiel(nuevoValor) {
 				this._colorPiel = nuevoValor;
 			}
 
@@ -57,11 +54,11 @@
 
 			// Reescribir metodo
 			saludar() {
-				return super.saludar() + " tambien soy una mascota";
+				return super.saludar() + " y también soy una mascota";
 			}
 		}
 
-		let pet1 = new Pet("Yoshi", "Invisible", "Verde");
+		const pet1 = new Pet("Yoshi", "Invisible", "Verde");
 
 		console.log(pet1);
 		console.log(pet1.nombre);
@@ -69,7 +66,6 @@
 
 		console.log(pet1.comer());
 		console.log(pet1.saludar());
-
 	</script>
 </body>
 </html>

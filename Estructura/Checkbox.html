@@ -7,7 +7,6 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
-	
 	<h4>¿Qué lenguajes conoces?</h4>
 
 	<form>
@@ -16,28 +15,21 @@
 		<input type="checkbox" id="check3">JavaScript<br>
 		<input type="checkbox" id="check4">C#<br>
 		<input type="checkbox" id="check5">Kotlin<br><br>
-		<input type="button" value="Confirmar" onclick="seleccion()">
+		<button type="button" onclick="seleccion()">Confirmar</button>
 	</form>
 
 	<script>
-		
 		function seleccion() {
 			let cantidadSeleccionada = 0;
-			let i;
 
-			for (i = 1; i < 6; i++) {
-
+			for (let i = 1; i <= 5; i++) {
 				if (document.getElementById(`check${i}`).checked) {
 					cantidadSeleccionada++;
 				}
 			}
 
-			if (cantidadSeleccionada !== 1) {
-				swal(`Conoces: ${cantidadSeleccionada} lenguajes`);
-				return;
-			}
-
-			swal(`Conoces: ${cantidadSeleccionada} lenguaje`);
+			const mensaje = `Conoces: ${cantidadSeleccionada} lenguaje${cantidadSeleccionada !== 1 ? 's' : ''}`;
+			swal(mensaje);
 		}
 	</script>
 </body>

@@ -6,37 +6,36 @@
 	<title>Clases</title>
 </head>
 <body>
-	
 	<script>
-
 		class Player {
 			constructor(nombre, colorSombrero) {
-				this.nombre = nombre;
+				this._nombre = nombre;
 				this.colorSombrero = colorSombrero;
 			}
 
+			// Métodos vacíos que podrían implementarse
 			saltar() {}
 			correr() {}
+
+			// Saludar
 			saludar() {
-				return `Hola soy ${this.nombre} y mi sombrero es ${this.colorSombrero}`
+				return `Hola, soy ${this._nombre} y mi sombrero es ${this.colorSombrero}`;
 			}
 
-			// Obtener un atributo
+			// Getter para nombre
 			get nombre() {
 				return this._nombre;
 			}
 
-			// Cambiar valor de un atributo
+			// Setter para nombre
 			set nombre(nuevoNombre) {
 				this._nombre = nuevoNombre;
 			}
 		}
 
-		let player1 = new Player("Mario", "Rojo");
-		let player2 = new Player("Luigi", "Verde");
-
-		console.log(player1);
-		console.log(player2);
+		// Creación de instancias y prueba de métodos
+		const player1 = new Player("Mario", "Rojo");
+		const player2 = new Player("Luigi", "Verde");
 
 		console.log(player1.saludar());
 		console.log(player2.saludar());
@@ -44,7 +43,6 @@
 		console.log(player1.nombre);
 		player1.nombre = "Alberto";
 		console.log(player1.nombre);
-
 	</script>
 </body>
 </html>

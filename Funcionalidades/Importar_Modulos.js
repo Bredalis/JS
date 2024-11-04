@@ -1,6 +1,5 @@
 
-// Importar modulos
+// Importar módulo
+import { area } from "./Exportar_Modulos.js";
 
-import {area} from "./Exportar_Modulos.js";
-
-console.log("Area: " + area(10));
+console.log(`Area: ${area(10)}`);
